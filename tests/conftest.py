@@ -31,16 +31,3 @@ def login_valid(driver):
     
     WebDriverWait(driver, 10).until(EC.url_to_be("https://www.saucedemo.com/inventory.html"))
     return login_page
-
-@pytest.fixture
-def login_locked(driver):
-    """
-    Fixture to attempt login with a locked-out user.
-    Ensures the error message appears as expected.
-    """
-    login_page = LoginPage(driver)
-    login_page.open()
-    login_page.login("locked_out_user", "secret_sauce")
-
-    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.CSS_SELECTOR, ".error-message-container.error")))
-    return login_page
