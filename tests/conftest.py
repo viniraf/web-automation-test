@@ -7,18 +7,19 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
 from pages.login_page import LoginPage
 
-@pytest.fixture
+@pytest.fixture(scope="class")
 def driver():
     """
     Fixture to initialize and close the WebDriver instance.
     This ensures a fresh browser session for each test.
     """
     driver = webdriver.Chrome()
+    driver.maximize_window()
     driver.implicitly_wait(10)
     yield driver
     driver.quit()
 
-@pytest.fixture
+@pytest.fixture(scope="class")
 def login_valid(driver):
     """
     Fixture to perform a valid login before executing the test.
