@@ -12,6 +12,8 @@ class InventoryPage:
     sort_dropdown = (By.CLASS_NAME, "product_sort_container")
     product_names = (By.CLASS_NAME, "inventory_item_name")
     product_prices = (By.CLASS_NAME, "inventory_item_price")
+    item_name = (By.CLASS_NAME, "inventory_item_name")
+    add_to_cart_button = (By.CLASS_NAME, "btn_inventory")
 
     def __init__(self, driver: WebDriver):
         self.driver = driver
@@ -43,3 +45,13 @@ class InventoryPage:
         """
         elements = self.driver.find_elements(*self.product_prices)
         return [float(element.text.replace("$", "")) for element in elements]
+    
+    def add_to_cart_by_name(self, product_name):
+        """Finds and clicks the add-to-cart button for a given product."""
+        items = self.driver.find_elements(*self.item_name)
+        buttons = self.driver.find_elements(*self.add_to_cart_button)
+
+        for i in range(len(items)):
+            if items[i].text == product_name:
+                buttons[i].click()
+                break
