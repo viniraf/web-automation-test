@@ -1,3 +1,4 @@
 selenium==4.29.0
 pytest==8.3.5
 webdriver-manager==4.0.1
+python-html==4.1.1
