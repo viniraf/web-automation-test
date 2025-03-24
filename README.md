@@ -65,6 +65,9 @@ Navegue até o diretório do projeto e instale as dependências usando o `pip`:
 
 ```bash
 cd web-automation-test
+```
+
+```bash
 pip install -r requirements.txt
 ```
 
