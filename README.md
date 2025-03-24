@@ -12,7 +12,7 @@ O projeto utiliza as seguintes tecnologias:
 - **Selenium**: Ferramenta para automação de navegadores, utilizada para interagir com a interface da aplicação.
 - **pytest**: Framework para execução dos testes e gerenciamento de resultados.
 - **WebDriver**: Drivers específicos para cada navegador (Chrome, Firefox, etc.) usados para controlar o navegador.
-- **python-html**: Plugin para o pytest que gera relatórios HTML detalhados, facilitando a visualização dos resultados dos testes.
+- **pytest-html**: Plugin para o pytest que gera relatórios HTML detalhados, facilitando a visualização dos resultados dos testes.
 
 ## Funcionalidades
 
