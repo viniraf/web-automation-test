@@ -88,6 +88,11 @@ pytest --html=report_tests.html
 ```
 Isso executará todos os testes presentes no diretório de testes e criará um relatório HTML com os resultados.
 
+## 🎥 Demonstração
+
+- [▶️ Clique aqui](https://github.com/viniraf/web-automation-test/raw/refs/heads/main/Demo.mp4) para baixar o vídeo.
+
+
 ## Estrutura do Projeto
 
 Aqui está uma visão geral da estrutura do projeto:
